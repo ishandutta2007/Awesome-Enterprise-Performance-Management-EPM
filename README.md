@@ -1,189 +1,139 @@
-# Awesome-Enterprise-Performance-Management-EPM
+# Awesome Enterprise Performance Management (EPM) & CPM Software [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Enterprise Performance Management (EPM) Ecosystem
+> A curated directory of the best **Enterprise Performance Management (EPM)**, **Corporate Performance Management (CPM)**, and **Financial Planning & Analysis (FP&A)** platforms, SaaS solutions, and open-source GitHub projects.
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Financial Consolidation, Budgeting & Corporate Performance Management*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Enterprise Performance Management (EPM)**. These tools enable finance teams to close the books, consolidate multi-entity financials, allocate costs, budget and forecast, and analyze variance—connecting financial planning with corporate performance management.
-
-
-
-**Examples** include Workday Adaptive Planning, Anaplan, Planful, OneStream, Prophix, Board, Vena Solutions, SAP Analytics Cloud, Oracle Fusion Cloud EPM, and IBM Planning Analytics (the category leaders).
-
-
-
-**Open-source emphasis**: EPM is a domain where open-source tooling is **severely limited**. An independent EU sovereignty review explicitly states that open-source Planning & EPM projects "usually cover parts of the job, not a complete EPM suite," and that "calculation models, approval workflows and reporting do not come ready-made" . The strongest active project is **Konsolidat**, an MIT-licensed IFRS/GAAP consolidation engine with intercompany elimination, NCI, and FX translation—but it is consolidation-focused, not a full EPM platform. No open-source project matches Anaplan or OneStream for integrated planning, consolidation, and reporting. Organizations requiring complete EPM should budget for commercial platforms.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Workday Adaptive Planning](https://www.workday.com/)**  
-
-  Cloud EPM platform for financial planning, workforce planning, operational planning, and close/consolidation; trusted by 7,000+ customers with AI-powered decision intelligence and average deployment of 4.5 months .
-
-
-
-- **[Anaplan](https://www.anaplan.com/)**  
-
-  Connected planning platform with multi-dimensional modeling, scenario analysis, and collaborative planning across finance, workforce, sales, and supply chain.
-
-
-
-- **[Planful](https://planful.com/)**  
-
-  Financial planning and consolidation platform with budgeting, forecasting, reporting, and close management for mid-market and enterprise finance teams.
-
-
-
-- **[OneStream](https://www.onestream.com/)**  
-
-  Unified corporate performance management platform combining financial consolidation, planning, reporting, and analytics in a single application.
-
-
-
-- **[Prophix](https://www.prophix.com/)**  
-
-  FP&A software with budgeting, forecasting, reporting, and consolidation capabilities for mid-market organizations.
-
-
-
-- **[Board](https://www.board.com/)**  
-
-  Decision-making platform with EPM capabilities for integrated business planning and scenario modeling.
-
-
-
-- **[Vena Solutions](https://www.venasolutions.com/)**  
-
-  Excel-native FP&A platform combining Excel familiarity with governed database, workflow, and audit trail.
-
-
-
-- **[SAP Analytics Cloud](https://www.sap.com/)**  
-
-  Cloud analytics and planning platform integrating BI, predictive analytics, and EPM planning capabilities within the SAP ecosystem.
-
-
-
-- **[Oracle Fusion Cloud EPM](https://www.oracle.com/)**  
-
-  Comprehensive EPM suite covering planning, budgeting, forecasting, financial consolidation, account reconciliation, tax reporting, and profitability management .
-
-
-
-- **[IBM Planning Analytics](https://www.ibm.com/)**  
-
-  TM1-based planning analytics platform with multi-dimensional modeling, scenario analysis, and integrated financial planning.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[Konsolidat](https://konsolidat.com/)**  
-
-  Open-source (MIT) IFRS/GAAP consolidation engine for SAP and Microsoft Dynamics environments; handles **intercompany elimination** (trading, profit-in-inventory, dividends, IC loans), **non-controlling interest** calculated automatically from time-variant ownership trees, **FX translation with CTA**, and cost allocation. Every consolidation step is version-controlled SQL validated by **26 automated data-quality assertions** on every close, with full audit traceability to source GL . Excel-native via `=EPM()` formula backed by ClickHouse and dbt; stack includes Airbyte → dbt → ClickHouse → Frappe. **This is the most credible open-source EPM-adjacent project available**, explicitly positioned as the open alternative to OneStream, Anaplan, and CCH Tagetik—but it is **consolidation and close focused**, not a complete integrated planning suite . Self-hosted with no license fee; operational cost estimated at 0.3–1 FTE data engineer plus cloud infrastructure .
-
-
-
-- **[Apache Pinot](https://github.com/apache/pinot)**  
-
-  Open-source distributed datastore for real-time analytics (Apache 2.0); while not an EPM application, it can serve as a high-performance backend for performance monitoring and analytical queries over large financial datasets . **Infrastructure component** rather than a planning or consolidation tool.
-
-
-
-- **[Mondrian](https://github.com/pentaho/mondrian)**  
-
-  Open-source Java OLAP engine for multidimensional analysis (originally Pentaho, now Hitachi Vantara); enables building custom analytical applications over financial data with MDX queries . **OLAP engine**—requires application development on top for EPM use cases.
-
-
-
-- **[Puzzle OKR](https://github.com/puzzle/okr)**  
-
-  Open-source tool for objectives and key results (AGPL-3.0) from Puzzle ITC in Bern; offered as a service or self-hosted . **OKR-focused**—relevant for performance management but not financial EPM.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **cfo-cli** — Open-source command-line financial tool for freelancers and small teams (MIT); features budget planning, expense tracking, cash flow forecasting, multi-currency support, and optional AI insights via Claude/OpenAI/local Ollama models . **Small-team/solo-operator focused** rather than enterprise EPM.
-
-- **graphical-budget-planner (GBP)** — Open-source desktop budget forecasting application (Qt) for personal and small-business financial planning; supports periodic and irregular financial streams, inflation adjustment, and present value calculations . **Personal/small-business budgeting** rather than enterprise consolidation or planning.
-
-- **nexus-accounting** — Open-source accounting package (PHP) with planned financial statement generation, period close, consolidation, and variance analysis; currently early-stage with many components marked "Planned" . **Not production-ready** for EPM use.
-
-
-
-**Frameworks for building custom systems**: No open-source EPM suite exists. **Konsolidat** provides the strongest foundation for IFRS/GAAP consolidation with tested intercompany elimination, NCI, and FX translation—but requires ClickHouse/dbt/Airbyte infrastructure and is consolidation-focused, not a full planning platform . For planning and budgeting, no mature open-source option exists; organizations must either use commercial EPM platforms or build custom applications atop OLAP engines (Mondrian) or analytical databases (Apache Pinot). An independent review confirms that open-source Planning & EPM tools cover parts of the job, not complete suites, and that calculation models, approval workflows, and reporting must be built or integrated separately .
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- EPM platforms handling financial consolidation and planning data must comply with applicable accounting standards (IFRS, GAAP), internal controls, and data governance policies; audit trails and version control are critical for financial reporting integrity.
-
-- **Open-source EPM is severely limited**—Konsolidat provides a credible consolidation engine but not a full EPM suite; Apache Pinot and Mondrian are infrastructure components requiring application development; other projects are small-team or personal finance tools. No open-source platform matches Anaplan, OneStream, or Oracle EPM for integrated planning, consolidation, and reporting. Organizations requiring complete EPM should budget for commercial platforms.
-
-- Verify license terms for commercial use; Konsolidat uses MIT , Apache Pinot uses Apache 2.0, Mondrian is open-source, and Puzzle OKR uses AGPL-3.0 .
-
-
+Enterprise Performance Management (EPM) and Corporate Performance Management (CPM) software empower CFOs, controllers, and FP&A teams to automate financial consolidation, multi-currency reporting, budgeting, operational forecasting, intercompany elimination, close management, and profitability variance analysis.
 
 ---
 
+## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Commercial EPM Platforms](#saas--commercial-epm-platforms)
+- [Open-Source EPM & Planning Projects](#open-source-epm--planning-projects)
+- [Building Custom EPM & Consolidation Architectures](#building-custom-epm--consolidation-architectures)
+- [Key Selection Criteria for Finance Leaders](#key-selection-criteria-for-finance-leaders)
+- [Contributing](#contributing)
+- [Disclaimer](#disclaimer)
 
-**Made for finance leaders, FP&A teams, controllers, and EPM systems architects.**  
+---
 
-Let's make enterprise performance management more open, but with honest acknowledgment of the gap that remains in this domain.
+## Sector Overview & Market Dynamics
+
+The global Enterprise Performance Management (EPM) software market is estimated at **$7.5 billion to $8.2 billion in 2026** (projected to surpass $15 billion to $17 billion by the mid-2030s at an annual CAGR of ~9–10%).
+
+The sector exhibits **moderate market concentration at the top**—where multi-product enterprise giants (Oracle, SAP, Workday, and IBM) capture roughly 45%–50% of total spend through native ERP integrations—coexisting with **high fragmentation across agile pure-play vendors** (Anaplan, OneStream, Planful, Prophix, Vena, Board) that win enterprise clients seeking cross-ERP data unification, specialized financial close modeling, and connected enterprise planning.
+
+---
+
+## SaaS & Commercial EPM Platforms
+
+The commercial EPM landscape is ranked below by company scale (market capitalization, private equity acquisition valuation, or annual revenue in descending order):
+
+| Platform | Company Size (Market Cap / Valuation / ARR) | Starting Tier Pricing | Free Tier / Trial Limits | Key Strengths & Use Cases |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Oracle Fusion Cloud EPM](https://www.oracle.com/performance-management/)** | **~$450B+ Market Cap** (Oracle Corp, NYSE: ORCL) | **$250/user/month** (Standard Edition, 10-user minimum; ~$2,500/mo per extra environment pod) | **30-day trial ($300 cloud credit)**; no permanent free tier for Fusion EPM SaaS (OCI free tier covers infrastructure only) | Full-suite enterprise planning, statutory close, IFRS/GAAP consolidation, automated account reconciliation, tax reporting, and narrative reporting. |
+| **[SAP Analytics Cloud](https://www.sap.com/products/technology-platform/cloud-analytics.html)** | **~$280B+ Market Cap** (SAP SE, NYSE: SAP) | **$36/user/month** (BI tier) / **$157/user/month** (Planning tier, billed annually) | **30-day standard free trial** on shared tenant with sample data; extendable up to **90 days total** | Unified business intelligence and driver-based financial planning tightly integrated with SAP S/4HANA, ECC, and SAP BW systems. |
+| **[IBM Planning Analytics](https://www.ibm.com/products/planning-analytics)** | **~$230B+ Market Cap** (IBM Corp, NYSE: IBM) | **$825/month** (Essentials cloud tier, includes 5 user seats; additional users scaling ~$165/user/mo) | **30-day full-featured trial** via Planning Analytics Workspace web/Excel interface with sample models | Ultra-high performance TM1 multidimensional in-memory calculation engine, complex driver-based modeling, and rolling scenario analysis. |
+| **[Workday Adaptive Planning](https://www.workday.com/en-us/products/adaptive-planning.html)** | **~$65B+ Market Cap** (Workday Inc, NASDAQ: WDAY) | **~$25,000/year** entry-level software subscription; mid-market deployments scale $80,000–$300,000/year | **30-day guided free trial** (structured product evaluation and interactive test-drive environment) | Collaborative multi-entity budgeting, workforce head-count planning, and operational forecasting with seamless Workday Financials integration. |
+| **[Anaplan](https://www.anaplan.com/)** | **$10.4B Valuation** (Thoma Bravo; ~$1B+ ARR) | **~$30,000–$50,000/year** baseline single-use case entry tier; mid-to-large enterprise contracts run $150,000–$1,000,000+/year | **No free trial or free tier**; product evaluations conducted exclusively via guided sales proofs of concept (PoC) | Proprietary Hyperblock in-memory calculation engine connecting cross-departmental planning across finance, sales quotas, and supply chain operations. |
+| **[OneStream](https://www.onestream.com/)** | **$6.4B Valuation** (Acquired by Hg; ~$600M ARR) | **~$150,000/year** base platform contract (interactive named user licenses scale ~$1,200/user/year) | **No free trial or free tier**; enterprise evaluations provisioned via formal scoped Proof of Concept (PoC) | Unified Corporate Performance Management replacing legacy fragmented tools with certified financial close, consolidation, and operational planning. |
+| **[Prophix](https://www.prophix.com/)** | **~$100M+ ARR** (Majority-owned by Hg) | **~$50,000/year** entry-level base configuration (~$250 to $2,500/user/year depending on role permissions) | **No permanent free tier**; interactive self-guided product tours available, with selective module trials upon sales request | Intuitive Corporate Performance Management platform for upper-mid-market finance teams, offering automated budgeting, close management, and cash flow planning. |
+| **[Board](https://www.board.com/)** | **€155M Revenue (~$165M)** (Nordic Capital) | **~$50,000–$75,000/year** starting annual contract value depending on entity scope and connector setup | **No self-service free trial or free tier**; custom sandbox and live evaluation environments arranged via sales consultation | All-in-one decision-making platform blending Corporate Performance Management (CPM), BI dashboards, and simulation modeling. |
+| **[Planful](https://planful.com/)** | **~$144M ARR** (Vector Capital) | **~$40,000/year** median entry contract (~$2,000–$4,000/user/year across 10–50 seats) | **No free trial or free tier**; trial instances provisioned privately during structured enterprise evaluation cycles | Continuous planning, workforce budgeting, financial close consolidation, and structured variance reporting tailored for scaling mid-market finance teams. |
+| **[Vena Solutions](https://www.venasolutions.com/)** | **~$116M ARR** (Centaur status, Vista Equity backed) | **~$25,000–$35,000/year** entry subscription tier (Professional tier; multi-module Complete tiers reach $75,000–$250,000/yr) | **No free trial or free tier**; customized evaluation and live model walk-throughs conducted via sales team | Native Microsoft Excel desktop and M365 interface connected to an enterprise-grade OLAP database, audit trail, and governance workflow. |
+
+---
+
+## Open-Source EPM & Planning Projects
+
+The open-source ecosystem in EPM is characterized by specialized consolidation engines, multidimensional OLAP cubes, distributed financial analytical engines, and emerging AI-native planning agents.
+
+The table below is sorted by GitHub Star counts in descending order:
+
+| Project & Repo | Stars | Architecture & Core Capabilities | Primary EPM Category |
+| :--- | :--- | :--- | :--- |
+| **[Apache Pinot](https://github.com/apache/pinot)** | [![GitHub stars](https://img.shields.io/github/stars/apache/pinot?style=social&color=white)](https://github.com/apache/pinot/stargazers) | Distributed real-time analytical datastore (Apache 2.0) built for low-latency ad-hoc slicing, dicing, and variance calculation over massive financial data streams. | Real-Time Financial Analytics Backend |
+| **[FinanceToolkit](https://github.com/JerBouma/FinanceToolkit)** | [![GitHub stars](https://img.shields.io/github/stars/JerBouma/FinanceToolkit?style=social&color=white)](https://github.com/JerBouma/FinanceToolkit/stargazers) | Transparent, modular Python toolkit (MIT) for programmatic normalization, multi-entity ratio calculation, financial statement analysis, and performance tracking. | Financial Statement & Performance Analysis |
+| **[Apache Kylin](https://github.com/apache/kylin)** | [![GitHub stars](https://img.shields.io/github/stars/apache/kylin?style=social&color=white)](https://github.com/apache/kylin/stargazers) | Distributed analytical engine (Apache 2.0) providing SQL OLAP multidimensional pre-computed cubes with sub-second queries on petabyte-scale datasets. | Multidimensional OLAP Engine |
+| **[Open Mercato](https://github.com/open-mercato/open-mercato)** | [![GitHub stars](https://img.shields.io/github/stars/open-mercato/open-mercato?style=social&color=white)](https://github.com/open-mercato/open-mercato/stargazers) | Modular open-source enterprise ERP framework (AGPL-3.0) with multi-company ledger automation, inter-company tracking, and group financial management. | Enterprise ERP & Multi-Company Ledger |
+| **[Cubes](https://github.com/DataBrewery/cubes)** | [![GitHub stars](https://img.shields.io/github/stars/DataBrewery/cubes?style=social&color=white)](https://github.com/DataBrewery/cubes/stargazers) | Lightweight Python framework (MIT) for Relational OLAP (ROLAP), multidimensional hierarchical rollups, aggregated browsing, and data cube slicing. | Python Multidimensional OLAP Cube |
+| **[Mondrian](https://github.com/pentaho/mondrian)** | [![GitHub stars](https://img.shields.io/github/stars/pentaho/mondrian?style=social&color=white)](https://github.com/pentaho/mondrian/stargazers) | Battle-tested open-source Java OLAP engine (EPL-2.0) executing MDX multidimensional queries over relational data warehouses (Mondrian ROLAP). | Java MDX OLAP Engine |
+| **[Puzzle OKR](https://github.com/puzzle/okr)** | [![GitHub stars](https://img.shields.io/github/stars/puzzle/okr?style=social&color=white)](https://github.com/puzzle/okr/stargazers) | Open-source platform (AGPL-3.0) for Objectives & Key Results (OKRs), linking corporate strategic performance targets with departmental execution. | Operational & Strategic Performance |
+| **[OpenFPA (Agent-Native)](https://github.com/JeffBrines/openfpa)** | [![GitHub stars](https://img.shields.io/github/stars/JeffBrines/openfpa?style=social&color=white)](https://github.com/JeffBrines/openfpa/stargazers) | Agent-native financial planning framework (Apache 2.0) featuring a finance kernel, company memory, and Karpathy-inspired iterative forecast optimization loops. | AI-Native FP&A Forecast Kernel |
+| **[OpenFPA Toolkit](https://github.com/Finasis/OpenFPA)** | [![GitHub stars](https://img.shields.io/github/stars/Finasis/OpenFPA?style=social&color=white)](https://github.com/Finasis/OpenFPA/stargazers) | Open-source corporate FP&A toolkit providing standardized budgeting templates, rolling scenario builders, and variance management models. | Open Corporate FP&A Toolkit |
+| **[FP&A AI Agent Cockpit](https://github.com/mriduldaga/Financial-Planning-and-Analysis-AI-Agent)** | [![GitHub stars](https://img.shields.io/github/stars/mriduldaga/Financial-Planning-and-Analysis-AI-Agent?style=social&color=white)](https://github.com/mriduldaga/Financial-Planning-and-Analysis-AI-Agent/stargazers) | Streamlit-based interactive cockpit for automated month-end financial close, variance commentary, dynamic scenario modeling, and executive deck creation. | AI Month-End Close & Variance Cockpit |
+| **[pyfpa](https://github.com/warrenpilot/pyfpa)** | [![GitHub stars](https://img.shields.io/github/stars/warrenpilot/pyfpa?style=social&color=white)](https://github.com/warrenpilot/pyfpa/stargazers) | Python financial library providing core multidimensional data cubes, consolidation trees, and variance calculations to transition Excel spreadsheets to code. | Python Financial Cube & Variance Library |
+| **[Stratus EPM](https://github.com/Maicarons/stratus-epm)** | [![GitHub stars](https://img.shields.io/github/stars/Maicarons/stratus-epm?style=social&color=white)](https://github.com/Maicarons/stratus-epm/stargazers) | Lightweight open-source group financial consolidation, budgeting, and statutory management reporting engine (Apache 2.0). | Group Financial Consolidation |
+| **[Konsolidat](https://konsolidat.com/)** | [![GitHub stars](https://img.shields.io/github/stars/grynn-in/konsol-cli?style=social&color=white)](https://github.com/grynn-in/konsol-cli/stargazers) | Production-grade IFRS/GAAP consolidation engine for SAP/Dynamics environments; automated intercompany elimination, time-variant NCI ownership trees, CTA FX translation, and 26 close assertions via ClickHouse, dbt, and Excel `=EPM()` formulas. (CLI/MCP repo: `grynn-in/konsol-cli`). | Open-Source IFRS/GAAP Consolidation Engine |
+
+---
+
+## Building Custom EPM & Consolidation Architectures
+
+Because off-the-shelf open-source software rarely provides a complete turn-key EPM suite out of the box, engineering organizations frequently assemble modern modular finance stacks:
+
+```mermaid
+flowchart TD
+    subgraph DataIngestion["1. Data Ingestion & Extraction"]
+        ERP["ERP Systems (SAP, NetSuite, Dynamics)"]
+        Sub["Subsidiary General Ledgers (GL)"]
+        HR["HRIS / Payroll (Workday, BambooHR)"]
+    end
+
+    subgraph Transformation["2. Consolidation & Modeling Engine"]
+        ETL["Ingestion Connectors (Airbyte / Fivetran)"]
+        DBT["dbt Transformations (IC Eliminations, NCI, FX)"]
+        DW["Analytical Store (ClickHouse / Snowflake / Pinot)"]
+        OLAP["Multidimensional OLAP (Kylin / Mondrian / Cubes)"]
+    end
+
+    subgraph Presentation["3. Reporting & Planning Interface"]
+        Excel["Excel Add-ins (=EPM() / Web Add-in)"]
+        BI["BI Dashboards (Superset / Metabase)"]
+        Agents["AI Planning Agents (LLM Variance Commentaries)"]
+    end
+
+    ERP --> ETL
+    Sub --> ETL
+    HR --> ETL
+    ETL --> DBT
+    DBT --> DW
+    DW --> OLAP
+    OLAP --> Excel
+    OLAP --> BI
+    OLAP --> Agents
+```
+
+- **Extraction & Ingestion**: ELT pipelines (Airbyte, Meltano) pull journal entries, trial balances, and operational headcount data into a unified central warehouse.
+- **Automated Consolidation Logic**: dbt models and SQL engines handle currency translation adjustments (CTA), elimination of intercompany receivables/payables, profit-in-inventory, and non-controlling interest (NCI).
+- **Presentation & Interface**: Finance analysts retain Microsoft Excel or Google Sheets connectivity using custom add-ins or Python backends while maintaining strict database governance and immutable audit logs.
+
+---
+
+## Key Selection Criteria for Finance Leaders
+
+When evaluating commercial EPM suites vs. open-source infrastructure, prioritize:
+
+1. **Regulatory Compliance & Auditability**: Ensure the system preserves immutable change logs, granular cell-level lineage, and automated SOX 404 audit controls.
+2. **Calculation Engine Performance**: Evaluate whether models rely on in-memory multidimensional OLAP cubes (e.g., Anaplan Hyperblock, IBM TM1) or column-store databases for instant scenario recalibration.
+3. **ERP Interoperability**: Gauge out-of-the-box bi-directional connectors for your transactional ERPs (SAP S/4HANA, Oracle ERP Cloud, Microsoft Dynamics 365, NetSuite).
+4. **Implementation Time & Total Cost of Ownership (TCO)**: Factor in software license costs, external implementation partner fees (often 100%–150% of Year 1 software), and internal maintenance headcounts.
+
+---
+
+## Contributing
+
+Contributions and additions to this curated index are welcome!
+
+1. Fork this repository.
+2. Create a descriptive feature branch (`git checkout -b feature/add-new-epm-tool`).
+3. Add the project with verified pricing, company scale, and star counts matching the table formats.
+4. Ensure links and markdown formatting pass validation.
+5. Open a Pull Request detailing your changes.
+
+---
+
+## Disclaimer
+
+This repository is an open community-curated directory intended for research, architectural planning, and educational purposes. Product pricing, licensing terms, and valuation benchmarks are subject to ongoing change by respective vendors. Always confirm specific licensing terms directly with vendor sales representatives or official project documentation before production deployment.
