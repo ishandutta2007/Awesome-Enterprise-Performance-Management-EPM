@@ -1,32 +1,47 @@
-# Awesome Enterprise Performance Management (EPM) & CPM Software [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Enterprise Performance Management Banner" width="100%">
+</p>
 
-> A curated directory of the best **Enterprise Performance Management (EPM)**, **Corporate Performance Management (CPM)**, and **Financial Planning & Analysis (FP&A)** platforms, SaaS solutions, and open-source GitHub projects.
+# 📊 Awesome Enterprise Performance Management (EPM) & CPM Software
 
-Enterprise Performance Management (EPM) and Corporate Performance Management (CPM) software empower CFOs, controllers, and FP&A teams to automate financial consolidation, multi-currency reporting, budgeting, operational forecasting, intercompany elimination, close management, and profitability variance analysis.
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome List" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Performance-Management-EPM/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Performance-Management-EPM?style=flat-square&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Performance-Management-EPM/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Enterprise-Performance-Management-EPM?style=flat-square&color=blue" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Performance-Management-EPM/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+> 🌟 A comprehensive, curated directory of the best **Enterprise Performance Management (EPM)**, **Corporate Performance Management (CPM)**, and **Financial Planning & Analysis (FP&A)** platforms, SaaS solutions, and open-source GitHub projects.
+
+Enterprise Performance Management (EPM) and Corporate Performance Management (CPM) software empower CFOs, finance directors, controllers, and FP&A teams to automate **financial consolidation**, multi-currency reporting, budgeting, operational forecasting, intercompany elimination, month-end close management, and profitability variance analysis. 🚀
 
 ---
 
-## Table of Contents
+## 📑 Table of Contents
 
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS & Commercial EPM Platforms](#saas--commercial-epm-platforms)
-- [Open-Source EPM & Planning Projects](#open-source-epm--planning-projects)
-- [Building Custom EPM & Consolidation Architectures](#building-custom-epm--consolidation-architectures)
-- [Key Selection Criteria for Finance Leaders](#key-selection-criteria-for-finance-leaders)
-- [Contributing](#contributing)
-- [Disclaimer](#disclaimer)
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [💼 SaaS & Commercial EPM Platforms](#-saas--commercial-epm-platforms)
+- [🔓 Open-Source EPM & Planning Projects](#-open-source-epm--planning-projects)
+- [🏗️ Building Custom EPM & Consolidation Architectures](#️-building-custom-epm--consolidation-architectures)
+- [🎯 Key Selection Criteria for Finance Leaders](#-key-selection-criteria-for-finance-leaders)
+- [🤝 Contributing](#-contributing)
+- [💖 Support](#-support)
+- [⭐ Star History](#-star-history)
+- [⚖️ Disclaimer](#️-disclaimer)
 
 ---
 
-## Sector Overview & Market Dynamics
+## 🌐 Sector Overview & Market Dynamics
 
-The global Enterprise Performance Management (EPM) software market is estimated at **$7.5 billion to $8.2 billion in 2026** (projected to surpass $15 billion to $17 billion by the mid-2030s at an annual CAGR of ~9–10%).
+📈 The global Enterprise Performance Management (EPM) software market is estimated at **$7.5 billion to $8.2 billion in 2026** (projected to surpass $15 billion to $17 billion by the mid-2030s at an annual CAGR of ~9–10%).
 
 The sector exhibits **moderate market concentration at the top**—where multi-product enterprise giants (Oracle, SAP, Workday, and IBM) capture roughly 45%–50% of total spend through native ERP integrations—coexisting with **high fragmentation across agile pure-play vendors** (Anaplan, OneStream, Planful, Prophix, Vena, Board) that win enterprise clients seeking cross-ERP data unification, specialized financial close modeling, and connected enterprise planning.
 
 ---
 
-## SaaS & Commercial EPM Platforms
+## 💼 SaaS & Commercial EPM Platforms
 
 The commercial EPM landscape is ranked below by company scale (market capitalization, private equity acquisition valuation, or annual revenue in descending order):
 
@@ -45,7 +60,7 @@ The commercial EPM landscape is ranked below by company scale (market capitaliza
 
 ---
 
-## Open-Source EPM & Planning Projects
+## 🔓 Open-Source EPM & Planning Projects
 
 The open-source ecosystem in EPM is characterized by specialized consolidation engines, multidimensional OLAP cubes, distributed financial analytical engines, and emerging AI-native planning agents.
 
@@ -69,7 +84,7 @@ The table below is sorted by GitHub Star counts in descending order:
 
 ---
 
-## Building Custom EPM & Consolidation Architectures
+## 🏗️ Building Custom EPM & Consolidation Architectures
 
 Because off-the-shelf open-source software rarely provides a complete turn-key EPM suite out of the box, engineering organizations frequently assemble modern modular finance stacks:
 
@@ -105,35 +120,51 @@ flowchart TD
     OLAP --> Agents
 ```
 
-- **Extraction & Ingestion**: ELT pipelines (Airbyte, Meltano) pull journal entries, trial balances, and operational headcount data into a unified central warehouse.
-- **Automated Consolidation Logic**: dbt models and SQL engines handle currency translation adjustments (CTA), elimination of intercompany receivables/payables, profit-in-inventory, and non-controlling interest (NCI).
-- **Presentation & Interface**: Finance analysts retain Microsoft Excel or Google Sheets connectivity using custom add-ins or Python backends while maintaining strict database governance and immutable audit logs.
+- 📥 **Extraction & Ingestion**: ELT pipelines (Airbyte, Meltano) pull journal entries, trial balances, and operational headcount data into a unified central warehouse.
+- ⚙️ **Automated Consolidation Logic**: dbt models and SQL engines handle currency translation adjustments (CTA), elimination of intercompany receivables/payables, profit-in-inventory, and non-controlling interest (NCI).
+- 📊 **Presentation & Interface**: Finance analysts retain Microsoft Excel or Google Sheets connectivity using custom add-ins or Python backends while maintaining strict database governance and immutable audit logs.
 
 ---
 
-## Key Selection Criteria for Finance Leaders
+## 🎯 Key Selection Criteria for Finance Leaders
 
 When evaluating commercial EPM suites vs. open-source infrastructure, prioritize:
 
-1. **Regulatory Compliance & Auditability**: Ensure the system preserves immutable change logs, granular cell-level lineage, and automated SOX 404 audit controls.
-2. **Calculation Engine Performance**: Evaluate whether models rely on in-memory multidimensional OLAP cubes (e.g., Anaplan Hyperblock, IBM TM1) or column-store databases for instant scenario recalibration.
-3. **ERP Interoperability**: Gauge out-of-the-box bi-directional connectors for your transactional ERPs (SAP S/4HANA, Oracle ERP Cloud, Microsoft Dynamics 365, NetSuite).
-4. **Implementation Time & Total Cost of Ownership (TCO)**: Factor in software license costs, external implementation partner fees (often 100%–150% of Year 1 software), and internal maintenance headcounts.
+1. 🔒 **Regulatory Compliance & Auditability**: Ensure the system preserves immutable change logs, granular cell-level lineage, and automated SOX 404 audit controls.
+2. ⚡ **Calculation Engine Performance**: Evaluate whether models rely on in-memory multidimensional OLAP cubes (e.g., Anaplan Hyperblock, IBM TM1) or column-store databases for instant scenario recalibration.
+3. 🔌 **ERP Interoperability**: Gauge out-of-the-box bi-directional connectors for your transactional ERPs (SAP S/4HANA, Oracle ERP Cloud, Microsoft Dynamics 365, NetSuite).
+4. 💰 **Implementation Time & Total Cost of Ownership (TCO)**: Factor in software license costs, external implementation partner fees (often 100%–150% of Year 1 software), and internal maintenance headcounts.
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Contributions and additions to this curated index are welcome!
 
-1. Fork this repository.
-2. Create a descriptive feature branch (`git checkout -b feature/add-new-epm-tool`).
-3. Add the project with verified pricing, company scale, and star counts matching the table formats.
-4. Ensure links and markdown formatting pass validation.
-5. Open a Pull Request detailing your changes.
+1. 🍴 Fork this repository.
+2. 🌿 Create a descriptive feature branch (`git checkout -b feature/add-new-epm-tool`).
+3. 📝 Add the project with verified pricing, company scale, and star counts matching the table formats.
+4. 🔍 Ensure links and markdown formatting pass validation.
+5. 🚀 Open a Pull Request detailing your changes.
 
 ---
 
-## Disclaimer
+## 💖 Support
+
+If you find this repository helpful for your enterprise architecture research or FP&A workflows, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it!
+- 🍴 **Fork and contribute** new tools, corrections, or implementation guides.
+- 📢 **Share with finance & engineering peers** exploring EPM, CPM, and consolidation stacks.
+- ☕ **Buy a coffee or sponsor ongoing maintenance**: Support via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007) ❤️
+
+---
+
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Enterprise-Performance-Management-EPM&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Enterprise-Performance-Management-EPM&type=date&legend=top-left)
+
+---
+
+## ⚖️ Disclaimer
 
 This repository is an open community-curated directory intended for research, architectural planning, and educational purposes. Product pricing, licensing terms, and valuation benchmarks are subject to ongoing change by respective vendors. Always confirm specific licensing terms directly with vendor sales representatives or official project documentation before production deployment.
